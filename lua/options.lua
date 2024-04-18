@@ -21,7 +21,6 @@ set.matchtime = 1 -- 入力された文字列がマッチするまでにかか�
 
 -- カラースキーム
 set.termguicolors = true -- 24 ビットカラーを使用
-set.background = "dark" -- ダークカラーを使用する
 
 -- インデント
 set.shiftwidth = 2 -- シフト幅を4に設定する
@@ -33,7 +32,7 @@ set.smartindent = true -- インデントを言語に合わせて調整する
 -- 表示
 set.number = true -- 行番号を表示
 set.relativenumber = false -- 相対行番号を非表示
-set.wrap = true -- テキストの自動折り返しを無効に
+set.wrap = false -- テキストの自動折り返しを有効に
 set.showtabline = 2 -- タブラインを表示
 set.visualbell = true -- ビープ音を表示する代わりに画面をフラッシュ
 set.showmatch = true -- 対応する括弧をハイライト表示
@@ -49,3 +48,13 @@ set.signcolumn = "yes" -- サインカラムを表示
 
 -- カーソルの形状
 vim.o.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+
+-- tex
+if vim.fn.has('mac') == 1 then
+  vim.g['vimtex_view_method'] = 'skim'
+else
+  vim.g['vimtex_view_method'] = 'zathura'
+end
+if vim.fn.has('nvim') == 1 then
+  vim.g['vimtex_compiler_progname'] = 'nvr'
+end
