@@ -1,7 +1,6 @@
 return {
   {
     'akinsho/toggleterm.nvim',
-    event = "VimEnter", -- vim起動時に起動
     keys = {
       { "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", desc = "open [L]azygit" },
     },
