@@ -7,6 +7,7 @@ return {
         "nvim-lua/plenary.nvim",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/nvim-cmp",
+        "saadparwaiz1/cmp_luasnip",
     },
     event = "VeryLazy",
     config = function()
@@ -57,12 +58,14 @@ return {
         local cmp = require("cmp")
         cmp.setup {
           mapping = cmp.mapping.preset.insert({
-            ['<F5>'] = cmp.mapping.complete(),
+            ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+            ['<C-f>'] = cmp.mapping.scroll_docs(4),
+            ['<C-Space>'] = cmp.mapping.complete(),
             ['<CR>'] = cmp.mapping.confirm {
               behavior = cmp.ConfirmBehavior.Replace,
               select = true,
             },
-            ['<C-p>'] = cmp.mapping.abort(),
+            ['<C-e>'] = cmp.mapping.abort(),
           }),
           sources = {
             { name = 'nvim_lsp' },
