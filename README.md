@@ -11,3 +11,13 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 git clone https://github.com/SuharaDaigo/nvim ~/.config/nvim
 nvim
 ```
+
+#### install LSP
+
+```shell
+nvim
+```
+```
+:Mason
+choose LanguageServer and press "i" key
+```
