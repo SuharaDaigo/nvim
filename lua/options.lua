@@ -1,4 +1,4 @@
-local options = 
+local options =
 {
   -- ファイル
   fileencoding = "utf-8", -- UTF-8に設定
@@ -21,27 +21,30 @@ local options =
 
   -- カラースキーム
   termguicolors = true, -- 24 ビットカラーを使用
+  background = "dark",
 
   -- インデント
-  shiftwidth = 4, -- シフト幅を4に設定する
-  tabstop = 4, -- タブ幅を4に設定する
+  shiftwidth = 2, -- シフト幅を2に設定する
+  tabstop = 2, -- タブ幅を2に設定する
   expandtab = true, -- タブ文字をスペースに置き換える
   autoindent = true, -- 自動インデントを有効にする
   smartindent = true, -- インデントを言語に合わせて調整する
 
   -- 表示
   number = true, -- 行番号を表示
+  cursorline = true, -- 現在行をハイライト
   relativenumber = false, -- 相対行番号を非表示
   wrap = true, -- テキストの自動折り返しを有効に
   showtabline = 2, -- タブラインを表示
   visualbell = true, -- ビープ音を表示する代わりに画面をフラッシュ
   showmatch = true, -- 対応する括弧をハイライト表示
+  list = true, -- 不可視文字を表示
+  scrolloff = 15, -- 上下から15行まで行ったら自動でスクロール
 
   -- インタフェース
   winblend = 0, -- ウィンドウの不透明度
   pumblend = 0, -- ポップアップメニューの不透明度
-  showtabline = 2, -- タブラインを表示する設定
-  signcolumn = "yes" -- サインカラムを表示
+  signcolumn = "yes" -- 行数の横にサインカラムを表示
 }
 
 for k, v in pairs(options) do
