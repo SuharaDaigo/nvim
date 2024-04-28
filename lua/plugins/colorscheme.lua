@@ -1,5 +1,5 @@
 -- ここの""の中を変えればカラースキームを変えられる
-local ColorScheme = "nord"
+local ColorScheme = "iceberg"
 
 
 -- nordの設定

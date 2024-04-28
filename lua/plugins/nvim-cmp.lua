@@ -1,4 +1,3 @@
-
 return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
@@ -45,6 +44,7 @@ return {
       }),
 
       sources = cmp.config.sources({
+        { name = "nvim_lsp"},
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
