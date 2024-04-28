@@ -22,6 +22,7 @@ local options =
   -- カラースキーム
   termguicolors = true, -- 24 ビットカラーを使用
   background = "dark",
+  transparency = 10,
 
   -- インデント
   shiftwidth = 2, -- シフト幅を2に設定する
@@ -43,7 +44,7 @@ local options =
 
   -- インタフェース
   winblend = 0, -- ウィンドウの不透明度
-  pumblend = 0, -- ポップアップメニューの不透明度
+  pumblend = 100, -- ポップアップメニューの不透明度
   signcolumn = "yes" -- 行数の横にサインカラムを表示
 }
 

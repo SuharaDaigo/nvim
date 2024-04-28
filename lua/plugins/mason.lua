@@ -4,10 +4,6 @@ return {
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-    "nvim-lua/plenary.nvim",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/nvim-cmp",
-    "saadparwaiz1/cmp_luasnip",
   },
   event = "VeryLazy",
   config = function()
@@ -40,7 +36,6 @@ return {
       }
     }
     -- Loading nvim-cmp
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lspconfig = require('lspconfig')
 
     local servers = {
@@ -53,24 +48,6 @@ return {
         capabilities = capabilities,
       }
     end
-
-    -- nvim-cmp key bindings
-    local cmp = require("cmp")
-    cmp.setup {
-      mapping = cmp.mapping.preset.insert({
-        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<CR>'] = cmp.mapping.confirm {
-          behavior = cmp.ConfirmBehavior.Replace,
-          select = true,
-        },
-        ['<C-e>'] = cmp.mapping.abort(),
-      }),
-      sources = {
-        { name = 'nvim_lsp' },
-      },
-    }
 
     mason_lspconfig.setup_handlers({
       function(server_name)
