@@ -44,9 +44,8 @@ function M.config()
   local luasnip = require "luasnip"
   require("luasnip/loaders/from_vscode").lazy_load()
 
-  vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
-  vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
-  vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
+  vim.api.nvim_set_hl(0, "MyPmenu", { bg = "Black", fg = "White" })
+  vim.api.nvim_set_hl(0, "MyPmenuSel", { bg = "#aaafff", fg = "Black", bold = true, italic = true })
 
   local check_backspace = function()
     local col = vim.fn.col "." - 1
@@ -149,10 +148,11 @@ function M.config()
       select = true,
     },
     window = {
-      completion = {
-        border = "rounded",
+      completion = cmp.config.window.bordered({
+        border = "double",
+        winhighlight = "Normal:MyPmenu,FloarBorder:MyPmenu,CursorLine:MyPmenuSel,Search:None",
         scrollbar = false,
-      },
+      }),
       documentation = {
         border = "rounded",
       },

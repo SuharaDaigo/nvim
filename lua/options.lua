@@ -40,5 +40,5 @@
 
   -- インタフェース
   vim.opt.winblend = 0 -- ウィンドウの不透明度
-  vim.opt.pumblend = 100 -- ポップアップメニューの不透明度
+  vim.opt.pumblend = 0 -- ポップアップメニューの不透明度
   vim.opt.signcolumn = "yes" -- 行数の横にサインカラムを表示
