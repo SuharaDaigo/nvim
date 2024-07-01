@@ -1,5 +1,19 @@
 -- ここの""の中を変えればカラースキームを変えられる
-local ColorScheme = "tokyonight"
+local ColorScheme = "nightfox"
+
+
+-- nightfox
+if ColorScheme == "nightfox" then
+  return {
+    "EdenEast/nightfox.nvim",
+    lazy = false,
+    config = function()
+      vim.cmd[[colorscheme nightfox]]
+    end
+  }
+end
+
+
 
 -- tokyonight
 if ColorScheme == "tokyonight" then
@@ -11,7 +25,6 @@ if ColorScheme == "tokyonight" then
     end
   }
 end
-  
 
 
 -- nordの設定
