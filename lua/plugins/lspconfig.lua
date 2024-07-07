@@ -8,6 +8,7 @@ return {
   config = function()
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
+    local icons = require("icons")
     local keymap = vim.keymap
     local opts = {noremap = true,silent = true}
     local on_attach = function(client, bufnr)
@@ -55,7 +56,7 @@ return {
     end
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
-    local signs = {Error = " ", Warn = " ",Hint = "󰠠 ", Info = " "}
+    local signs = {Error = icons.diagnostics.BoldError, Warn = icons.diagnostics.BoldWarning, Info = icons.diagnostics.BoldInformation}
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
