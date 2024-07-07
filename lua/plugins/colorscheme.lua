@@ -1,5 +1,19 @@
--- ここの""の中を変えればカラースキームを変えられる
-local ColorScheme = "nightfox"
+-- Choose ColorScheme
+local ColorScheme = "iceberg"
+
+
+------------ config --------------
+
+-- molokai
+if ColorScheme == "molokai" then
+  return {
+    "tomasr/molokai",
+    lazy = false,
+    config = function()
+      vim.cmd[[colorscheme molokai]]
+    end
+  }
+end
 
 
 -- nightfox
@@ -12,7 +26,6 @@ if ColorScheme == "nightfox" then
     end
   }
 end
-
 
 
 -- tokyonight
@@ -47,6 +60,5 @@ if ColorScheme == "iceberg" then
      config = function()
        vim.cmd[[colorscheme iceberg]]
      end
-    
   }
 end
