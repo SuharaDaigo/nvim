@@ -1,23 +1,28 @@
 return {
-  "williamboman/mason-lspconfig.nvim",
-  event = { "InsertEnter" },
+  "williamboman/mason.nvim",
+  event = "VimEnter",
   dependencies = {
-    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   },
   config = function()
-    local servers = {
-      "gopls",
-      "lua_ls"
-    }
+    local mason = require("mason")
+    local mason_lspconfig = require("mason-lspconfig")
 
-    require("mason").setup {
-      ui = {
-        border = "rounded",
+    mason.setup({
+      icons = {
+      }
+    })
+    
+    mason_lspconfig.setup({
+      ensure_installed = {
+        "html",
+        "cssls",
+        "lua_ls",
+        "clangd",
+        "gopls",
+        "pyright",
       },
-    }
-
-    require("mason-lspconfig").setup {
-      ensure_installed = servers,
-    }
+      automatic_installation = true,
+    })
   end
 }

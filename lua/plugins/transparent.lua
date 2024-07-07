@@ -1,6 +1,6 @@
---:TransparetEnable
---:TransparetToggle
---:TransparetDisable
+--:TransparentEnable
+--:TransparentToggle
+--:TransparentDisable
 
 return {
   "xiyaowong/transparent.nvim",

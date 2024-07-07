@@ -28,14 +28,14 @@ return {
 
   keys = {
     {
-      '<leader>t',
+      '<leader>tt',
       function()
         require('toggleterm').toggle(0)
       end,
       noremap = true
     },
     {
-      "<leader>g",
+      "<leader>gg",
       function()
         _lazygit_toggle()
       end,
