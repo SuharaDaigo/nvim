@@ -3,14 +3,16 @@ return {
   event = "VimEnter",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
   config = function()
     local mason = require("mason")
     local mason_lspconfig = require("mason-lspconfig")
+    local mason_tool_installer = require("mason-tool-installer")
     local icons = require("icons")
 
     mason.setup({
-      ui= {
+      ui = {
         icons = {
           package_installed = icons.ui.Check,
           package_pending = icons.ui.ChevronRight,
@@ -29,6 +31,17 @@ return {
         "pyright",
       },
       automatic_installation = true,
+    })
+
+    mason_tool_installer.setup({
+      ensure_installed = {
+        "prettier", -- prettier formatter
+        "stylua",   -- lua formatter
+        "isort",    -- python formatter
+        "black",    -- python formatter
+        "pylint",
+        "eslint_d",
+      },
     })
   end
 }
