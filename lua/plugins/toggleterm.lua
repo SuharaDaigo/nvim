@@ -7,17 +7,17 @@ return {
       on_open = function()
         vim.cmd [[startinsert]]
       end,
-      direction = "horizontal"
+      direction = "float"
     }
-    local Terminal  = require('toggleterm.terminal').Terminal
-    local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = 'float' })
+    local Terminal = require('toggleterm.terminal').Terminal
+    local lazygit  = Terminal:new({ cmd = "lazygit", hidden = true, direction = 'float' })
 
     function _lazygit_toggle()
       lazygit:toggle()
     end
 
     function _G.set_terminal_keymaps()
-      local opts = {buffer = 0}
+      local opts = { buffer = 0 }
       vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
       vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]])
     end
