@@ -1,4 +1,4 @@
-local ColorScheme = "molokai"
+local ColorScheme = "nightfox"
 
 
 ------------ config --------------
