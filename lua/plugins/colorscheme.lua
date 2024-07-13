@@ -1,5 +1,4 @@
--- Choose ColorScheme
-local ColorScheme = "iceberg"
+local ColorScheme = "molokai"
 
 
 ------------ config --------------
@@ -10,7 +9,7 @@ if ColorScheme == "molokai" then
     "tomasr/molokai",
     lazy = false,
     config = function()
-      vim.cmd[[colorscheme molokai]]
+      vim.cmd [[colorscheme molokai]]
     end
   }
 end
@@ -22,7 +21,7 @@ if ColorScheme == "nightfox" then
     "EdenEast/nightfox.nvim",
     lazy = false,
     config = function()
-      vim.cmd[[colorscheme nightfox]]
+      vim.cmd [[colorscheme nightfox]]
     end
   }
 end
@@ -34,7 +33,7 @@ if ColorScheme == "tokyonight" then
     "folke/tokyonight.nvim",
     lazy = false,
     config = function()
-      vim.cmd[[colorscheme tokyonight-storm]]
+      vim.cmd [[colorscheme tokyonight-storm]]
     end
   }
 end
@@ -46,7 +45,7 @@ if ColorScheme == "nord" then
     "nordtheme/vim",
     lazy = false,
     config = function()
-      vim.cmd[[colorscheme nord]]
+      vim.cmd [[colorscheme nord]]
     end
   }
 end
@@ -55,10 +54,10 @@ end
 -- icebergの設定
 if ColorScheme == "iceberg" then
   return {
-    "cocopon/iceberg.vim" ,
-     lazy = false,
-     config = function()
-       vim.cmd[[colorscheme iceberg]]
-     end
+    "cocopon/iceberg.vim",
+    lazy = false,
+    config = function()
+      vim.cmd [[colorscheme iceberg]]
+    end
   }
 end
