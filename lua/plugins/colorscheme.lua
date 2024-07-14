@@ -1,5 +1,4 @@
-local ColorScheme = "nightfox"
-
+local ColorScheme = "tokyonight"
 
 ------------ config --------------
 
