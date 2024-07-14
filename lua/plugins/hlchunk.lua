@@ -6,9 +6,9 @@ return {
       chunk = {
         enable = true,
         priority = 15,
-        duration = 200,
+        duration = 300,
         error_sign = true,
-        delay = 50,
+        delay = 100,
         chars = {
           horizontal_line = "─",
           vertical_line = "│",

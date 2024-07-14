@@ -1,4 +1,4 @@
-local ColorScheme = "iceberg"
+local ColorScheme = "nightfox"
 
 ------------ config --------------
 
