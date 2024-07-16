@@ -9,11 +9,16 @@ return {
       end,
       direction = "float"
     }
-    local Terminal = require('toggleterm.terminal').Terminal
-    local lazygit  = Terminal:new({ cmd = "lazygit", hidden = true, direction = 'float' })
+    local Terminal   = require('toggleterm.terminal').Terminal
+    local lazygit    = Terminal:new({ cmd = "lazygit", hidden = true, direction = 'float' })
+    local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true, direction = 'float' })
 
     function _lazygit_toggle()
       lazygit:toggle()
+    end
+
+    function _lazydocker_toggle()
+      lazydocker:toggle()
     end
 
     function _G.set_terminal_keymaps()
@@ -38,6 +43,13 @@ return {
       "<leader>gg",
       function()
         _lazygit_toggle()
+      end,
+      noremap = true
+    },
+    {
+      "<leader>dd",
+      function()
+        _lazydocker_toggle()
       end,
       noremap = true
     }
