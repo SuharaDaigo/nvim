@@ -1,9 +1,6 @@
 return {
 	"norcalli/nvim-colorizer.lua",
 	event = { "BufReadPre", "BufNewFile" },
-	config = function()
-		require("colorizer").setup()
-	end,
 	DEFAULT_OPTIONS = {
 		RGB = true, -- #RGB hex codes
 		RRGGBB = true, -- #RRGGBB hex codes
@@ -16,4 +13,7 @@ return {
 		-- Available modes: foreground, background
 		mode = "background", -- Set the display mode.
 	},
+    config = function()
+		require("colorizer").setup()
+	end,
 }
