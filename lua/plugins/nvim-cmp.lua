@@ -20,7 +20,7 @@ return {
 		local lspkind = require("lspkind")
 
 		vim.keymap.set("n", "<leader>e", require("luasnip.loaders").edit_snippet_files, { desc = "Edit snippets" })
-		require("luasnip.loaders.from_vscode").load()
+		require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/nvim/my_snippets" } })
 
 		cmp.setup({
 			completion = {
